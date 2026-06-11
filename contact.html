@@ -82,65 +82,122 @@
       <div class="form-section-title">Send an Enquiry</div>
       <p class="form-section-sub">Tell us about your building and what you need done. The more detail, the better we can prepare for a conversation.</p>
 
-      <div class="enquiry-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">First Name *</label>
-            <input class="form-input" type="text" placeholder="Jane" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Last Name *</label>
-            <input class="form-input" type="text" placeholder="Smith" required />
-          </div>
-        </div>
+      <form class="enquiry-form"
+      name="enquiry"
+      method="POST"
+      data-netlify="true">
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Email *</label>
-            <input class="form-input" type="email" placeholder="jane@company.co.nz" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone</label>
-            <input class="form-input" type="tel" placeholder="021 000 0000" />
-          </div>
-        </div>
+  <input type="hidden" name="form-name" value="enquiry" />
 
-        <div class="form-group">
-          <label class="form-label">Company / Organisation</label>
-          <input class="form-input" type="text" placeholder="Your company name (if applicable)" />
-        </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">First Name *</label>
+      <input class="form-input" type="text" name="first_name" placeholder="Jane" required />
+    </div>
 
-        <div class="form-group service-check-group">
-          <div class="form-label">Service Required *</div>
-          <div class="service-checklist" role="group" aria-label="Service Required">
-            <label class="check-option"><input type="checkbox" name="services" value="Building Wash / Window Clean" /> <span>Building Wash / Window Clean</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Painting &amp; Coatings" /> <span>Painting &amp; Coatings</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Sealant &amp; Leak Repairs" /> <span>Sealant &amp; Leak Repairs</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Building Inspection &amp; Report" /> <span>Building Inspection &amp; Report</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Facade Remedials &amp; Glazing" /> <span>Facade Remedials &amp; Glazing</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Construction Assistance" /> <span>Construction Assistance</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Banner Installation" /> <span>Banner Installation</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Green Wall Maintenance" /> <span>Green Wall Maintenance</span></label>
-            <label class="check-option"><input type="checkbox" name="services" value="Bird Proofing &amp; Pest Control" /> <span>Bird Proofing &amp; Pest Control</span></label>
-            <label class="check-option"><input id="service-other-check" type="checkbox" name="services" value="Other" data-other-toggle="service-other-detail" /> <span>Other</span></label>
-          </div>
-        </div>
+    <div class="form-group">
+      <label class="form-label">Last Name *</label>
+      <input class="form-input" type="text" name="last_name" placeholder="Smith" required />
+    </div>
+  </div>
 
-        <div class="form-group other-service-field" id="service-other-detail" hidden>
-          <label class="form-label" for="service-other-text">Other Service Details</label>
-          <input class="form-input" id="service-other-text" type="text" placeholder="Tell us what you need" />
-        </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">Email *</label>
+      <input class="form-input" type="email" name="email" placeholder="jane@company.co.nz" required />
+    </div>
 
-        <div class="form-group">
-          <label class="form-label">Building / Location</label>
-          <input class="form-input" type="text" placeholder="e.g. 12-storey commercial building, Auckland CBD" />
-        </div>
+    <div class="form-group">
+      <label class="form-label">Phone</label>
+      <input class="form-input" type="tel" name="phone" placeholder="021 000 0000" />
+    </div>
+  </div>
 
-        <div class="form-group">
-          <label class="form-label">Tell us about the job *</label>
-          <textarea class="form-textarea" placeholder="Describe what you need done, any access challenges, approximate size or scope, and any relevant background. The more detail you can give us, the better." required></textarea>
-        </div>
+  <div class="form-group">
+    <label class="form-label">Company / Organisation</label>
+    <input class="form-input" type="text" name="company" />
+  </div>
 
+  <!-- SERVICES -->
+  <div class="form-group service-check-group">
+    <div class="form-label">Service Required *</div>
+
+    <div class="service-checklist" role="group" aria-label="Service Required">
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Building Wash / Window Clean" />
+        <span>Building Wash / Window Clean</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Painting & Coatings" />
+        <span>Painting & Coatings</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Sealant & Leak Repairs" />
+        <span>Sealant & Leak Repairs</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Building Inspection & Report" />
+        <span>Building Inspection & Report</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Facade Remedials & Glazing" />
+        <span>Facade Remedials & Glazing</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Construction Assistance" />
+        <span>Construction Assistance</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Banner Installation" />
+        <span>Banner Installation</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Green Wall Maintenance" />
+        <span>Green Wall Maintenance</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Bird Proofing & Pest Control" />
+        <span>Bird Proofing & Pest Control</span>
+      </label>
+
+      <label class="check-option">
+        <input type="checkbox" name="services" value="Other" />
+        <span>Other</span>
+      </label>
+
+    </div>
+  </div>
+
+  <!-- OTHER DETAILS -->
+  <div class="form-group">
+    <label class="form-label">Other Service Details</label>
+    <input class="form-input" type="text" name="other_service" placeholder="Tell us what you need" />
+  </div>
+
+  <!-- JOB DESCRIPTION -->
+  <div class="form-group">
+    <label class="form-label">Tell us about the job *</label>
+    <textarea class="form-textarea"
+              name="job_description"
+              placeholder="Describe access, scope, building size, urgency, etc."
+              required></textarea>
+  </div>
+
+  <div class="form-submit-row">
+    <button class="btn-primary" type="submit">Send Enquiry</button>
+    <p class="form-privacy">We’ll only use your details to respond to your enquiry.</p>
+  </div>
+
+</form>
         <div class="form-submit-row">
           <button class="btn-primary" type="submit">Send Enquiry</button>
           <p class="form-privacy">We'll only use your details to respond to your enquiry. No spam, no mailing lists.</p>
