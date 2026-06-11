@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label="Billboard installation icon">
+  <rect width="360" height="220" fill="#f7f5ef"/>
+  <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M117 41h158v82H117z" stroke-width="7"/>
+    <path d="M141 41c0-8 5-12 14-12h3c9 0 15 4 15 12" stroke-width="7"/>
+    <path d="M173 41c0-8 5-12 14-12h3c9 0 15 4 15 12" stroke-width="7"/>
+    <path d="M205 41c0-8 5-12 14-12h3c9 0 15 4 15 12" stroke-width="7"/>
+    <path d="M237 41c0-8 5-12 14-12h3c9 0 15 4 15 12" stroke-width="7"/>
+    <path d="M197 123v67" stroke-width="10"/>
+    <path d="M178 190h38" stroke-width="10"/>
+    <path d="M184 177h26" stroke-width="10"/>
+  </g>
+</svg>
