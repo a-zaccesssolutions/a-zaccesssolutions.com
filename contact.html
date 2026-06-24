@@ -299,9 +299,12 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const formData = new FormData(form);
+
     fetch("/", {
       method: "POST",
-      body: new FormData(form)
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
     })
     .then(() => {
       const msg = document.getElementById("form-success");
