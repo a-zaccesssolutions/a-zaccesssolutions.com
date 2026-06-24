@@ -82,12 +82,13 @@
       <div class="form-section-title">Send an Enquiry</div>
       <p class="form-section-sub">Tell us about your building and what you need done. The more detail, the better we can prepare for a conversation.</p>
 
-<form class="enquiry-form"
-      name="enquiry"
+<form name="enquiry"
       method="POST"
-      action="/"
       data-netlify="true"
-      netlify>
+      netlify-honeypot="bot-field">
+
+  <input type="hidden" name="form-name" value="enquiry" />
+<input type="hidden" name="bot-field" />
 
   <input type="hidden" name="form-name" value="enquiry" />
 
