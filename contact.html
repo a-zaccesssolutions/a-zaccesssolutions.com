@@ -85,12 +85,12 @@
 <form name="enquiry"
       method="POST"
       data-netlify="true"
-      netlify-honeypot="bot-field">
+      netlify-honeypot="bot-field"
+      onsubmit="handleFormSubmit(event)">
 
   <input type="hidden" name="form-name" value="enquiry" />
-<input type="hidden" name="bot-field" />
+  <input type="hidden" name="bot-field" />
 
-  <input type="hidden" name="form-name" value="enquiry" />
 
   <div class="form-row">
     <div class="form-group">
@@ -186,17 +186,21 @@
     <input class="form-input" type="text" name="other_service" placeholder="Tell us what you need" />
   </div>
 
-  <!-- JOB DESCRIPTION -->
-  <div class="form-group">
-    <label class="form-label">Tell us about the job *</label>
-    <textarea class="form-textarea"
-              name="job_description"
-              placeholder="Describe access, scope, building size, urgency, etc."
-              required></textarea>
-  </div>
+<!-- JOB DESCRIPTION -->
+<div class="form-group">
+  <label class="form-label">Tell us about the job *</label>
+  <textarea class="form-textarea"
+            name="job_description"
+            placeholder="Describe access, scope, building size, urgency, etc."
+            required></textarea>
+</div>
 
 <div class="form-submit-row">
   <button class="btn-primary" type="submit">Send Enquiry</button>
+
+  <div id="form-success" style="display:none; margin-top:10px; color:green;">
+    ✔ Thanks — your enquiry has been sent. We’ll be in touch soon.
+  </div>
 </div>
 
 </form>
@@ -284,10 +288,31 @@
     </div>
     <div class="footer-bottom"><div class="footer-copy">&copy; 2026 A-Z Access Solutions Ltd. North Shore, Auckland, NZ.</div></div>
   </footer>
-  <script src="assets/site.js"></script>
+   <script src="assets/site.js"></script>
+
+  <!-- FORM SUCCESS HANDLER -->
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const form = event.target;
+
+      fetch("/", {
+        method: "POST",
+        body: new FormData(form)
+      })
+      .then(() => {
+        document.getElementById("form-success").style.display = "block";
+        form.reset();
+      })
+      .catch(() => {
+        alert("Something went wrong. Please try again.");
+      });
+    }
+  </script>
+
 </body>
 </html>
-
 
 
 
