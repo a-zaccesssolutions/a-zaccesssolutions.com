@@ -84,6 +84,19 @@
     Tell us about your building and what you need done. The more detail, the better we can prepare for a conversation.
   </p>
 
+  <!-- IMPORTANT: hidden static form for Netlify detection -->
+  <form name="enquiry" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="first_name" />
+    <input type="text" name="last_name" />
+    <input type="email" name="email" />
+    <input type="text" name="phone" />
+    <input type="text" name="company" />
+    <input type="text" name="services" />
+    <input type="text" name="other_service" />
+    <textarea name="job_description"></textarea>
+  </form>
+
+  <!-- REAL VISIBLE FORM -->
   <form name="enquiry"
         method="POST"
         data-netlify="true"
@@ -95,24 +108,24 @@
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">First Name *</label>
-        <input class="form-input" type="text" name="first_name" placeholder="John" required />
+        <input class="form-input" type="text" name="first_name" required />
       </div>
 
       <div class="form-group">
         <label class="form-label">Last Name *</label>
-        <input class="form-input" type="text" name="last_name" placeholder="Smith" required />
+        <input class="form-input" type="text" name="last_name" required />
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Email *</label>
-        <input class="form-input" type="email" name="email" placeholder="jane@company.co.nz" required />
+        <input class="form-input" type="email" name="email" required />
       </div>
 
       <div class="form-group">
         <label class="form-label">Phone</label>
-        <input class="form-input" type="tel" name="phone" placeholder="021 000 0000" />
+        <input class="form-input" type="tel" name="phone" />
       </div>
     </div>
 
@@ -121,51 +134,42 @@
       <input class="form-input" type="text" name="company" />
     </div>
 
-    <!-- SERVICES -->
-    <div class="form-group service-check-group">
+    <div class="form-group">
       <div class="form-label">Service Required *</div>
 
-      <div class="service-checklist">
-
-        <label><input type="checkbox" name="services" value="Building Wash / Window Clean"> Building Wash / Window Clean</label><br>
-        <label><input type="checkbox" name="services" value="Painting & Coatings"> Painting & Coatings</label><br>
-        <label><input type="checkbox" name="services" value="Sealant & Leak Repairs"> Sealant & Leak Repairs</label><br>
-        <label><input type="checkbox" name="services" value="Building Inspection & Report"> Building Inspection & Report</label><br>
-        <label><input type="checkbox" name="services" value="Facade Remedials & Glazing"> Facade Remedials & Glazing</label><br>
-        <label><input type="checkbox" name="services" value="Construction Assistance"> Construction Assistance</label><br>
-        <label><input type="checkbox" name="services" value="Banner Installation"> Banner Installation</label><br>
-        <label><input type="checkbox" name="services" value="Green Wall Maintenance"> Green Wall Maintenance</label><br>
-        <label><input type="checkbox" name="services" value="Bird Proofing & Pest Control"> Bird Proofing & Pest Control</label><br>
-        <label><input type="checkbox" name="services" value="Other"> Other</label>
-
-      </div>
+      <label><input type="checkbox" name="services" value="Building Wash / Window Clean"> Building Wash / Window Clean</label><br>
+      <label><input type="checkbox" name="services" value="Painting & Coatings"> Painting & Coatings</label><br>
+      <label><input type="checkbox" name="services" value="Sealant & Leak Repairs"> Sealant & Leak Repairs</label><br>
+      <label><input type="checkbox" name="services" value="Building Inspection & Report"> Building Inspection & Report</label><br>
+      <label><input type="checkbox" name="services" value="Facade Remedials & Glazing"> Facade Remedials & Glazing</label><br>
+      <label><input type="checkbox" name="services" value="Construction Assistance"> Construction Assistance</label><br>
+      <label><input type="checkbox" name="services" value="Banner Installation"> Banner Installation</label><br>
+      <label><input type="checkbox" name="services" value="Green Wall Maintenance"> Green Wall Maintenance</label><br>
+      <label><input type="checkbox" name="services" value="Bird Proofing & Pest Control"> Bird Proofing & Pest Control</label><br>
+      <label><input type="checkbox" name="services" value="Other"> Other</label>
     </div>
 
     <div class="form-group">
       <label class="form-label">Other Service Details</label>
-      <input class="form-input" type="text" name="other_service" placeholder="Tell us what you need" />
+      <input class="form-input" type="text" name="other_service" />
     </div>
 
     <div class="form-group">
       <label class="form-label">Tell us about the job *</label>
-      <textarea class="form-textarea"
-                name="job_description"
-                placeholder="Describe access, scope, building size, urgency, etc."
-                required></textarea>
+      <textarea class="form-textarea" name="job_description" required></textarea>
     </div>
 
     <div class="form-submit-row">
       <button class="btn-primary" type="submit">Send Enquiry</button>
 
       <div id="form-success" style="display:none; margin-top:10px; color:green;">
-        ✔ Thanks — your enquiry has been sent. We’ll be in touch soon.
+        ✔ Thanks — your enquiry has been sent.
       </div>
+      
     </div>
-
-  </form>
+ </form>
+  
 </div>
-</form>
-    </div>
   </section>
     
 
