@@ -97,6 +97,19 @@
   </form>
 
   <!-- REAL VISIBLE FORM -->
+  <style>
+.service-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+
+.service-checklist label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+</style>
   <form name="enquiry"
         method="POST"
         data-netlify="true"
@@ -134,20 +147,23 @@
       <input class="form-input" type="text" name="company" />
     </div>
 
-    <div class="form-group">
-      <div class="form-label">Service Required *</div>
+<div class="form-group service-check-group">
+  <div class="form-label">Service Required *</div>
 
-      <label><input type="checkbox" name="services" value="Building Wash / Window Clean"> Building Wash / Window Clean</label><br>
-      <label><input type="checkbox" name="services" value="Painting & Coatings"> Painting & Coatings</label><br>
-      <label><input type="checkbox" name="services" value="Sealant & Leak Repairs"> Sealant & Leak Repairs</label><br>
-      <label><input type="checkbox" name="services" value="Building Inspection & Report"> Building Inspection & Report</label><br>
-      <label><input type="checkbox" name="services" value="Facade Remedials & Glazing"> Facade Remedials & Glazing</label><br>
-      <label><input type="checkbox" name="services" value="Construction Assistance"> Construction Assistance</label><br>
-      <label><input type="checkbox" name="services" value="Banner Installation"> Banner Installation</label><br>
-      <label><input type="checkbox" name="services" value="Green Wall Maintenance"> Green Wall Maintenance</label><br>
-      <label><input type="checkbox" name="services" value="Bird Proofing & Pest Control"> Bird Proofing & Pest Control</label><br>
-      <label><input type="checkbox" name="services" value="Other"> Other</label>
-    </div>
+  <div class="service-checklist">
+
+<label><input type="checkbox" name="services" value="Building Wash / Window Clean"> Building Wash / Window Clean</label>
+<label><input type="checkbox" name="services" value="Painting & Coatings"> Painting & Coatings</label>
+<label><input type="checkbox" name="services" value="Sealant & Leak Repairs"> Sealant & Leak Repairs</label>
+<label><input type="checkbox" name="services" value="Building Inspection & Report"> Building Inspection & Report</label>
+<label><input type="checkbox" name="services" value="Facade Remedials & Glazing"> Facade Remedials & Glazing</label>
+<label><input type="checkbox" name="services" value="Construction Assistance"> Construction Assistance</label>
+<label><input type="checkbox" name="services" value="Banner Installation"> Banner Installation</label>
+<label><input type="checkbox" name="services" value="Green Wall Maintenance"> Green Wall Maintenance</label>
+<label><input type="checkbox" name="services" value="Bird Proofing & Pest Control"> Bird Proofing & Pest Control</label>
+<label><input type="checkbox" name="services" value="Other"> Other</label>
+      </div>
+</div>
 
     <div class="form-group">
       <label class="form-label">Other Service Details</label>
