@@ -269,22 +269,23 @@
     </div>
     <div class="footer-bottom"><div class="footer-copy">&copy; 2026 A-Z Access Solutions Ltd. North Shore, Auckland, NZ.</div></div>
   </footer>
-    <script src="assets/site.js"></script>
+      <script src="assets/site.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector('form[name="enquiry"]');
-  const msg = document.getElementById("form-success");
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector('form[name="enquiry"]');
+      const msg = document.getElementById("form-success");
 
-  if (!form) return;
+      if (!form) return;
 
-  form.addEventListener("submit", function () {
-    setTimeout(() => {
-      if (msg) msg.style.display = "block";
-      form.reset();
-    }, 300);
-  });
-});
-</script>
+      form.addEventListener("submit", function () {
+        setTimeout(() => {
+          if (msg) msg.style.display = "block";
+          form.reset();
+        }, 300);
+      });
+    });
+  </script>
+
 </body>
 </html>
