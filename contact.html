@@ -77,7 +77,7 @@
       </div>
     </div>
 
-  <!-- RIGHT: Enquiry form -->
+ <!-- RIGHT: Enquiry form -->
 <div>
   <div class="form-section-title">Send an Enquiry</div>
   <p class="form-section-sub">
@@ -96,6 +96,18 @@
       gap: 8px;
       align-items: center;
     }
+
+    /* FIX: dropdown matches form theme */
+    .form-input select,
+    select.form-input {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    select.form-input option {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
   </style>
 
   <form name="enquiry"
@@ -109,39 +121,39 @@
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">First Name *</label>
-        <input class="form-input" type="text" name="first_name" required />
+        <input class="form-input" type="text" name="first_name" placeholder="John" required />
       </div>
 
       <div class="form-group">
         <label class="form-label">Last Name *</label>
-        <input class="form-input" type="text" name="last_name" required />
+        <input class="form-input" type="text" name="last_name" placeholder="Smith" required />
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Email *</label>
-        <input class="form-input" type="email" name="email" required />
+        <input class="form-input" type="email" name="email" placeholder="john@company.co.nz" required />
       </div>
 
       <div class="form-group">
         <label class="form-label">Phone</label>
-        <input class="form-input" type="tel" name="phone" />
+        <input class="form-input" type="tel" name="phone" placeholder="021 000 0000" />
       </div>
-    </div>
-
-    <!-- NEW: HIGH VALUE LEAD FIELD -->
-    <div class="form-group">
-      <label class="form-label">Building / Site Address</label>
-      <input class="form-input" type="text" name="site_address" placeholder="e.g. 12-storey office, Auckland CBD" />
     </div>
 
     <div class="form-group">
       <label class="form-label">Company / Organisation</label>
-      <input class="form-input" type="text" name="company" />
+      <input class="form-input" type="text" name="company" placeholder="Company / Organisation" />
     </div>
 
-    <!-- NEW: URGENCY (LEAD QUALITY BOOSTER) -->
+    <!-- NEW FIELD -->
+    <div class="form-group">
+      <label class="form-label">Building / Site Address</label>
+      <input class="form-input" type="text" name="site_address" placeholder="Building / Site Address" />
+    </div>
+
+    <!-- URGENCY -->
     <div class="form-group">
       <label class="form-label">Job Urgency</label>
       <select class="form-input" name="urgency">
@@ -149,7 +161,7 @@
         <option value="urgent">Urgent (ASAP)</option>
         <option value="this_week">This week</option>
         <option value="this_month">This month</option>
-        <option value="planning">Just planning / quoting</option>
+        <option value="planning">Planning / quoting</option>
       </select>
     </div>
 
@@ -173,12 +185,15 @@
 
     <div class="form-group">
       <label class="form-label">Other Service Details</label>
-      <input class="form-input" type="text" name="other_service" />
+      <input class="form-input" type="text" name="other_service" placeholder="Tell us what you need" />
     </div>
 
     <div class="form-group">
       <label class="form-label">Tell us about the job *</label>
-      <textarea class="form-textarea" name="job_description" required></textarea>
+      <textarea class="form-textarea"
+                name="job_description"
+                placeholder="Describe access, scope, building size, urgency, etc."
+                required></textarea>
     </div>
 
     <div class="form-submit-row">
